@@ -45,6 +45,7 @@ gulp.task("serve", ["css"], () => {
 
   gulp.watch(paths.src.css + "*.css", ["css"]);
   gulp.watch(paths.config.tailwind, ["css"]);
+  gulp.watch(paths.dist.base + "*.html", ["css"]);
   gulp.watch(paths.dist.base + "*.html").on("change", browserSync.reload);
 });
 
